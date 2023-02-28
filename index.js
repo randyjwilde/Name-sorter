@@ -20,6 +20,7 @@ function say(message) {
   msg.text = message;
   window.speechSynthesis.speak(msg);
 }
+
 function hear() {// new speech recognition object
   var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
   var recognition = new SpeechRecognition();
