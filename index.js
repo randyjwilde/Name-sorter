@@ -16,8 +16,9 @@ function myFunction(newName) {
   } else if (trim === "randall") {
     answer = clean + ", you smell good like chery blossoms";
   } else if (trim === "evie") {
-    answer = clean + ", you smell worse than beth";
   } else if (trim === "evilin") {
+  } else if (trim === "bethany") {
+    answer = clean + ", you smell good like a rose";
     answer =
       clean + ", you smell like fresh cut wood. just by the way that is good";
   } else {
