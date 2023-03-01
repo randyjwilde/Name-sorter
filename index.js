@@ -9,16 +9,17 @@ function myFunction(newName) {
   var answer;
   if (clean === "randy") {
     answer = clean + ", Good name";
-  } else if (trim === "david") {
+  } else if (clean === "david") {
     answer = clean + ", you smell bad";
-  } else if (trim === "beth") {
+  } else if (clean === "beth") {
     answer = clean + ", you smell bad";
-  } else if (trim === "randall") {
+  } else if (clean === "bethany") {
+    answer = clean + ",you smell good like roses";
+  } else if (clean === "randall") {
     answer = clean + ", you smell good like chery blossoms";
-  } else if (trim === "evie") {
-  } else if (trim === "evilin") {
-  } else if (trim === "bethany") {
-    answer = clean + ", you smell good like a rose";
+  } else if (clean === "evie") {
+    answer = clean + ", you smell worse than beth";
+  } else if (clean === "evilin") {
     answer =
       clean + ", you smell like fresh cut wood. just by the way that is good";
   } else {
