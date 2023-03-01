@@ -6,7 +6,6 @@ function myFunction(newName) {
   var clean = trim.replaceAll(".", "");
 
   document.getElementById("name").value = clean;
-
   var answer;
   if (clean === "randy") {
     answer = clean + ", Good name";
@@ -14,8 +13,8 @@ function myFunction(newName) {
     answer = clean + ", you smell bad";
   } else if (trim === "beth") {
     answer = clean + ", you smell bad";
-  } else if (trim === "david") {
-    answer = clean + ", you smell bad";
+  } else if (trim === "randall") {
+    answer = clean + ", you smell good like chery blossoms ";
   } else if (trim === "david") {
     answer = clean + ", you smell bad";
   } else {
