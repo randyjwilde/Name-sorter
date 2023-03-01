@@ -1,18 +1,28 @@
 function myFunction(newName) {
-
   var name = newName || document.getElementById("name").value;
-  document.getElementById("name").value = name;
+
   var low = name.toLowerCase();
   var trim = low.trim();
-  var answer;
+  var clean = trim.replaceAll(".", "");
 
-  if (trim === "randy") {
-    answer = name + ", Good name";
+  document.getElementById("name").value = clean;
+
+  var answer;
+  if (clean === "randy") {
+    answer = clean + ", Good name";
+  } else if (trim === "david") {
+    answer = clean + ", you smell bad";
+  } else if (trim === "beth") {
+    answer = clean + ", you smell bad";
+  } else if (trim === "david") {
+    answer = clean + ", you smell bad";
+  } else if (trim === "david") {
+    answer = clean + ", you smell bad";
   } else {
-    answer = name + ", bad name";
+    answer = clean + ", bad name";
   }
   document.getElementById("answer").innerHTML = answer;
-  say(answer)
+  say(answer);
 }
 
 function say(message) {
@@ -21,7 +31,8 @@ function say(message) {
   window.speechSynthesis.speak(msg);
 }
 
-function hear() {// new speech recognition object
+function hear() {
+  // new speech recognition object
   var SpeechRecognition = SpeechRecognition || webkitSpeechRecognition;
   var recognition = new SpeechRecognition();
   recognition.continuous = false;
@@ -35,8 +46,7 @@ function hear() {// new speech recognition object
   recognition.onspeechend = function () {
     // when user is done speaking
     recognition.stop();
-  }
-
+  };
 
   var finalTranscripts = "";
   recognition.onresult = function (event) {
@@ -48,8 +58,7 @@ function hear() {// new speech recognition object
       if (event.results[i].isFinal) {
         myFunction(transcript);
         finalTranscripts += transcript;
-      }
-      else {
+      } else {
         interimTranscripts += transcript;
       }
     }
